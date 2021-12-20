@@ -1,5 +1,62 @@
 # Lecture-13-Codes
 
+//EXERCISES
+
+Input/Output Array
+Write a program that puts 5 integer values provided by the user into an array. Then output these values to the console.
+
+        #include <iostream>
+        #include <string>
+        using namespace std;
+        int main()
+        {
+            int courses[5];
+
+            for (int i = 0; i < 5; i++) {
+                cout << "\nEnter the " << i + 1 << " number: " ;
+                cin >> courses[i];
+                while (cin.fail()) {
+                    cout << "\nInvalid Input" << endl;
+                    cout << "Enter the number again: ";
+                    cin.clear();
+                    cin.ignore();
+                    cin >> courses[i];
+                }
+            }
+            cout << "\nOutput: \n\n";
+            for (auto course : courses) {
+                cout << course << endl;
+            }
+        }
+
+
+Array Art
+
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+      string snacks[5][5] = 
+      {
+      {"_"," ","_"," ","_"}, 
+      {"_", "O", "_", "O", "_"}, 
+      {"_", "@", "@", "@", "_"},
+      {"_", "^", "^", "^", "_"}, 
+      {"_", "V", "V", "V","_" } 
+      };
+
+      for (int i = 0; i < 5; i++)
+      {
+        cout << endl;
+        for (int j = 0; j < 5; j++) 
+        {
+          cout << snacks[i][j];
+        }
+      }
+      cout << endl;
+    }
+
+//NOT EXERCISE
 
 Range Based for Loop
 
@@ -76,31 +133,6 @@ Accessing 2D Array Values
       }
 
 
-Array Art
-
-    #include <iostream>
-    using namespace std;
-    int main()
-    {
-      string snacks[5][5] = 
-      {
-      {"_"," ","_"," ","_"}, 
-      {"_", "O", "_", "O", "_"}, 
-      {"_", "@", "@", "@", "_"},
-      {"_", "^", "^", "^", "_"}, 
-      {"_", "V", "V", "V","_" } 
-      };
-
-      for (int i = 0; i < 5; i++)
-      {
-        cout << endl;
-        for (int j = 0; j < 5; j++) 
-        {
-          cout << snacks[i][j];
-        }
-      }
-      cout << endl;
-    }
 
 
  
